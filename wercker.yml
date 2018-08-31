@@ -28,4 +28,5 @@ build:
     - script:
         name: gradle build
         code: |
+          touch $WERCKER_REPORT_ARTIFACTS_DIR/test.txt
           ./gradlew --full-stacktrace -q --project-cache-dir=$WERCKER_CACHE_DIR build
